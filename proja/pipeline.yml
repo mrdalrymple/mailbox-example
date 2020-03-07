@@ -1,13 +1,13 @@
 version: 1
-# stages
-stages:
-  main:
-    inbox:
-      - slot:
-        tag: get_resource(stuff_a_txtfiles, "recommended")
-        label: stuff_a
-        pattern: "*.txt => /textfiles/"
-    outbox:
-      - slot: 
-        label: stuff_b
-        pattern: "*.txt => /textfiles/"
+
+# mb store get LUA/2de [best]
+inbox:
+  LUA:
+    tag: best
+  #LUA2:
+  #  tag: worst
+  #LUA:
+  #  tag: super
+#inbox:
+#  - LUA:
+#      tag: best
