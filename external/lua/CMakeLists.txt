@@ -46,4 +46,5 @@ set (
 set( CMAKE_CXX_FLAGS  "${CMAKE_C_FLAGS} ${CFLAGS}" )
 set( CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${LDFLAGS}" )
 
-add_library(lua STATIC ${SRCS})
+add_library(lua_static STATIC ${SRCS})
+add_library(lua SHARED ${SRCS})

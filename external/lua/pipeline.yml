@@ -1,0 +1,18 @@
+
+
+steps:
+  - "mkdir cbuild_debug"
+  - "cd cbuild_debug && cmake .."
+  - "cd cbuild_debug && cmake --build . --config Debug"
+  - "mkdir cbuild_release"
+  - "cd cbuild_release && cmake .."
+  - "cd cbuild_release && cmake --build . --config Release"
+
+outbox:
+  LUA:
+    - "cbuild_debug/Debug/*.lib -> Debug/"
+    - "cbuild_debug/Debug/*.dll -> Debug/"
+    - "cbuild_debug/Debug/*.pdb -> Debug/"
+    - "cbuild_debug/Debug/*.ilk -> Debug/"
+    - "cbuild_release/Release/*.lib -> Release/"
+    - "cbuild_release/Release/*.dll -> Release/"
