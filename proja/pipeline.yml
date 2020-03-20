@@ -3,11 +3,23 @@ version: 1
 # mb store get LUA/2de [best]
 inbox:
   LUA:
-    tag: best
+    tag: worst
   #LUA2:
   #  tag: worst
   #LUA:
   #  tag: super
-#inbox:
+
+  #inbox:
 #  - LUA:
 #      tag: best
+
+#stage:
+#  MYLUA:
+#    - *.exe => /bin/
+
+#$(MB_LUA_ROOT_RELPATH)\Release
+
+
+outbox:
+  PROJA:
+    - "*.txt -> /rel/"
